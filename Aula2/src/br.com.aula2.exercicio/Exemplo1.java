@@ -7,7 +7,11 @@ public class Exemplo1 {
         x=10;
         y=11;
         num = x++;
-        System.out.println("x: " + x + "\ny:" + y + "num:");
+        System.out.println("x: " + x + "\ny:" + y + "\nnum:"+ num);
 
-    }
+        soma = (x+y)-(++y);
+        System.out.println("x: " + x + "\ny:" + y + "\nsoma:"+ soma);
+
+    
+}
 }
