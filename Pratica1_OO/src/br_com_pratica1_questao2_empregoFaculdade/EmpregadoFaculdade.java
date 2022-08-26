@@ -7,12 +7,11 @@ public class EmpregadoFaculdade {
 
     double getGastos(){
         double bonus = 40;
-        salario = bonus * horasAula;
-        return this.salario;
+        return this.salario + (bonus * horasAula);
     } 
 
     String getInfo(){
-        return "nome:" + " com salario " + this.salario;
+        return "nome:" + " com salario " + getGastos();
     }
 
 }
