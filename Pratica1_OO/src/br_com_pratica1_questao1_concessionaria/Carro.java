@@ -9,5 +9,13 @@ public class Carro {
     private int ano;
     private double valor;
 
+    public Carro(String marca, String modelo, int ano, double valor){
+            this.marca = marca;
+            this.modelo = modelo;
+            this.ano = ano;
+            this.valor = valor;
+
+    }
+
     
 }
