@@ -36,7 +36,17 @@ public class Aluno {
         if (notaAV1 + notaAV2 >= 60){
             return "Aprovado";
         } else {
+            return "Recuperação";
+        }
+    }
+
+    public String AvaliarRecuperação(Double notaAV1, Double notaAV2, Double notaAE){
+        Double media = (notaAV1 + notaAV2 + notaAE)/3;
+        if(media >= 60){
+            return "Aprovado";
+        } else {
             return "Reprovado";
         }
+
     }
 }
