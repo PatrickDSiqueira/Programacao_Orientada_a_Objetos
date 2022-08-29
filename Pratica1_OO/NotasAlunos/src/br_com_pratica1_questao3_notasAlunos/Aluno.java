@@ -20,4 +20,23 @@ public class Aluno {
             this.periodo = periodo;
     }
 
+    public void SetNotaAV1(Double notaAV1){
+        this.notaAV1 = notaAV1;
+    }
+
+    public void SetNotaAV2(Double notaAV2){
+        this.notaAV2 = notaAV2;
+    }
+
+    public void SetNotaAE(Double notaAE){
+        this.notaAE = notaAE;
+    }
+    
+    public String AvaliarAluno(Double notaAV1, Double notaAV2){
+        if (notaAV1 + notaAV2 >= 60){
+            return "Aprovado";
+        } else {
+            return "Reprovado";
+        }
+    }
 }
