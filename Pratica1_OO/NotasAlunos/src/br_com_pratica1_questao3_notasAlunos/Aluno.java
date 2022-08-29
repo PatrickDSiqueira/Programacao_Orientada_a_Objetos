@@ -2,15 +2,15 @@ package br_com_pratica1_questao3_notasAlunos;
 
 public class Aluno {
     private String nome;
-    private int matricula;
+    private String matricula;
     private Double notaAV1;
     private Double notaAV2;
     private Double notaAE;
     private String curso;
-    private int periodo;
+    private String periodo;
 
     public Aluno(
-        String nome, int matricula, Double notaAV1, Double notaAV2, Double notaAE, String curso, int periodo){
+        String nome, String matricula, Double notaAV1, Double notaAV2, Double notaAE, String curso, String periodo){
             this.nome = nome;
             this.matricula = matricula; 
             this.notaAV1 = notaAV1;
@@ -47,6 +47,13 @@ public class Aluno {
         } else {
             return "Reprovado";
         }
+        
+    }
 
+
+    @Override
+    public String toString() {
+        return "Aluno [ curso= " + curso + ", matricula= " + matricula + ", nome= " + nome + ", notaAE= " + notaAE
+                + ", notaAV1= " + notaAV1 + ", notaAV2= " + notaAV2 + ", periodo= " + periodo + " ]";
     }
 }
