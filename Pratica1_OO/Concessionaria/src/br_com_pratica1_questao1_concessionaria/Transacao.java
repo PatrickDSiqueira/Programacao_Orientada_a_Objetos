@@ -4,15 +4,15 @@ public class Transacao {
     private String dataRealizacao;
     private double valor;
     private int idTransacao;
-    private int idDestinatario;
-    private int idRemetente;
+    private Cliente destinatario;
+    private Cliente remetente;
 
-    public Transacao(String dataRealizacao, double valor, int idTransacao, int idDestinatario, int idRemetente){
+    public Transacao(String dataRealizacao, double valor, int idTransacao, Cliente destinatario, Cliente remetente){
         this.dataRealizacao = dataRealizacao;
         this.valor = valor; 
         this.idTransacao = idTransacao;
-        this.idDestinatario = idDestinatario;
-        this.idRemetente = idRemetente;
+        this.destinatario = destinatario;
+        this.remetente = remetente;
     }
     
 }
