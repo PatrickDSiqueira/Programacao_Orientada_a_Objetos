@@ -13,6 +13,7 @@ public class App {
     static Carro carro1 = null, carro2 = null;
     static Textos textos = new Textos();
     static String opcao = "";
+    static Transacao Transacao1 = null;
 
     static List < Cliente > listaClientes = new ArrayList < Cliente >();
     static List < Carro > listaCarros = new ArrayList < Carro >();
@@ -75,9 +76,7 @@ public class App {
                     break;
 
                 case "3": 
-                        for (Cliente cl : listaClientes) {
-                            System.out.println(cl);
-                        }
+                        FazerTransacao();
                     break;
 
                 case "0":
@@ -93,6 +92,28 @@ public class App {
             }
         } while ( saidaMenu == false );
         ler.close();
+        }
+
+        public  static void FazerTransacao() {
+
+    //         System.out.println("Escolha um Remetente : ");
+    //             Cliente destinatario = EscolherCliente(); 
+    //         Cliente remetente = null;
+
+    //         double valor ;
+    //         int idTransacao ;
+
+    //         Transacao1 = new Transacao(valor, idTransacao, destinatario, remetente);
+    // }
+
+        public static Cliente EscolherCliente() {
+
+                for (Cliente cliente : listaClientes) {
+                    System.out.println(cliente.getNome());
+                }
+
+                return null;
+            }
         }
 
         public static Cliente CadastrarCliente(){

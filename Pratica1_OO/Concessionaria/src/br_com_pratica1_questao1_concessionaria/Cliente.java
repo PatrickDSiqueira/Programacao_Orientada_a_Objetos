@@ -24,4 +24,52 @@ public class Cliente {
         return "Cliente [aleatorio=" + aleatorio + ", anoNascimeto=" + anoNascimeto + ", cpf=" + cpf + ", id=" + id
                 + ", nome=" + nome + ", numeroTelefone=" + numeroTelefone + "]";
     }
+
+    public Random getAleatorio() {
+        return aleatorio;
+    }
+
+    public void setAleatorio(Random aleatorio) {
+        this.aleatorio = aleatorio;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public long getNumeroTelefone() {
+        return numeroTelefone;
+    }
+
+    public void setNumeroTelefone(long numeroTelefone) {
+        this.numeroTelefone = numeroTelefone;
+    }
+
+    public int getAnoNascimeto() {
+        return anoNascimeto;
+    }
+
+    public void setAnoNascimeto(int anoNascimeto) {
+        this.anoNascimeto = anoNascimeto;
+    }
 }
