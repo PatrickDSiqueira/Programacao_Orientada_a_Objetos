@@ -21,27 +21,41 @@ public class App {
                 case "1":
                 cliente1 = CadastrarCliente();
                 System.out.println("Deseja cadastrar outro cliente?");
-
-                System.out.println(textos.getMenuSimNao());
+                
+                do {
+                    System.out.println(textos.getMenuSimNao());
                     opcao = ler.next();
-
-                    if(opcao == "1"){
-                        cliente2 = CadastrarCliente();
-                    }
+                    switch (opcao) {
+                        case "1":
+                                cliente2 = CadastrarCliente();
+                            break;
+                        case "2":
+                            break;
+                        default:
+                            System.out.println("Opcao inválida !");
+                            break;
+                        }
+                } while (!(opcao != "1" || opcao != "2"));
 
                     break;
 
                 case "2":
                         carro1 = CadastrarCarro();
                         System.out.println("Deseja cadastrar outro carro?");
-
+                        do {
                         System.out.println(textos.getMenuSimNao());
                         opcao = ler.next();
-
-                        if(opcao == "1")
-                        {
-                            carro2 = CadastrarCarro();
-                        }
+                        switch (opcao) {
+                            case "1":
+                                    carro2 = CadastrarCarro();
+                                break;
+                            case "2":
+                                break;
+                            default:
+                                System.out.println("Opcao inválida !");
+                                break;
+                            }
+                    } while (!(opcao != "1" || opcao != "2"));
                             
 
                     break;
