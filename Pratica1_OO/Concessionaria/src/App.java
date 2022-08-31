@@ -5,6 +5,7 @@ import java.util.Scanner;
 import br_com_pratica1_questao1_concessionaria.Carro;
 import br_com_pratica1_questao1_concessionaria.Cliente;
 import br_com_pratica1_questao1_concessionaria.Textos;
+import br_com_pratica1_questao1_concessionaria.Transacao;
 
 public class App {
     static Scanner ler = new Scanner(System.in);
@@ -12,11 +13,13 @@ public class App {
     static Carro carro1 = null, carro2 = null;
     static Textos textos = new Textos();
     static String opcao = "";
-    
-    static List < Cliente > listaCliente = new ArrayList < Cliente >();
+
+    static List < Cliente > listaClientes = new ArrayList < Cliente >();
+    static List < Carro > listaCarros = new ArrayList < Carro >();
+    static List < Transacao > listaTransacoes = new ArrayList < Transacao >();
+
 
     public static void main(String[] args) {
-        System.out.println(listaCliente.isEmpty());
         boolean saidaMenu = false;
 
         do {
@@ -26,6 +29,7 @@ public class App {
             switch (opcao) {
                 case "1":
                 cliente1 = CadastrarCliente();
+                    listaClientes.add(cliente1);
 
                 System.out.println("Deseja cadastrar outro cliente?");
 
@@ -35,8 +39,8 @@ public class App {
                     switch (opcao) {
                         case "1":
                                 cliente2 = CadastrarCliente();
-                                    // listaCliente[1] = cliente2;
-                            break;
+                                    listaClientes.add(cliente2);
+                                break;
                         case "2":
                             break;
                         default:
@@ -49,7 +53,7 @@ public class App {
 
                 case "2":
                         carro1 = CadastrarCarro();
-                            // listaCarro[0] = carro1;
+                            listaCarros.add(carro1);
                         System.out.println("Deseja cadastrar outro carro?");
                         do {
                         System.out.print(textos.getMenuSimNao());
@@ -57,7 +61,7 @@ public class App {
                         switch (opcao) {
                             case "1":
                                     carro2 = CadastrarCarro();
-                                        // listaCarro[1] = carro2;
+                                        listaCarros.add(carro2);
                                 break;
                             case "2":
                                 break;
@@ -70,10 +74,12 @@ public class App {
 
                     break;
 
-                case "3": //  Transação
-                    
-
+                case "3": 
+                        for (Cliente cl : listaClientes) {
+                            System.out.println(cl);
+                        }
                     break;
+
                 case "0":
                         saidaMenu = true;
                         System.out.println("Programa Finalizado!");

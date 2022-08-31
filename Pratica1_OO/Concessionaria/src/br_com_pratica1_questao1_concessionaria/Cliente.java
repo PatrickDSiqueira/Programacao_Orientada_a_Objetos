@@ -19,5 +19,9 @@ public class Cliente {
         this.anoNascimeto = anoNascimeto;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Cliente [aleatorio=" + aleatorio + ", anoNascimeto=" + anoNascimeto + ", cpf=" + cpf + ", id=" + id
+                + ", nome=" + nome + ", numeroTelefone=" + numeroTelefone + "]";
+    }
 }

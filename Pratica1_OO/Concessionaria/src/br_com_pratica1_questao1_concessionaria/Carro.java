@@ -17,5 +17,10 @@ public class Carro {
 
     }
 
+    @Override
+    public String toString() {
+        return "Carro [ano=" + ano + ", marca=" + marca + ", modelo=" + modelo + ", valor=" + valor + "]";
+    }
+
     
 }
