@@ -21,9 +21,9 @@ public class App {
                 case "1":
                 cliente1 = CadastrarCliente();
                 System.out.println("Deseja cadastrar outro cliente?");
-                
+
                 do {
-                    System.out.println(textos.getMenuSimNao());
+                    System.out.print(textos.getMenuSimNao());
                     opcao = ler.next();
                     switch (opcao) {
                         case "1":
@@ -43,7 +43,7 @@ public class App {
                         carro1 = CadastrarCarro();
                         System.out.println("Deseja cadastrar outro carro?");
                         do {
-                        System.out.println(textos.getMenuSimNao());
+                        System.out.print(textos.getMenuSimNao());
                         opcao = ler.next();
                         switch (opcao) {
                             case "1":
@@ -103,7 +103,7 @@ public class App {
                 String modelo = ler.next(); 
             System.out.print("Ano : ");
                 int ano = ler.nextInt(); 
-            System.out.println("Valor : ");
+            System.out.print("Valor : ");
                 Double valor = ler.nextDouble();
             return new Carro(marca, modelo, ano, valor);
         }
