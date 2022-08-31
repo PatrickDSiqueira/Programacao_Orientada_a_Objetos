@@ -47,7 +47,7 @@ public class App {
                             System.out.println("Opcao inválida !");
                             break;
                         }
-                } while (!(opcao != "1" || opcao != "2"));
+                } while (!(opcao.equals("1")) && !(opcao.equals("2")));
 
                     break;
 
@@ -69,7 +69,7 @@ public class App {
                                 System.out.println("Opcao inválida !");
                                 break;
                             }
-                    } while (!(opcao != "1" || opcao != "2"));
+                    } while (!(opcao.equals("1")) && !(opcao.equals("2")));
                             
 
                     break;
