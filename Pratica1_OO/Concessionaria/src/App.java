@@ -8,6 +8,9 @@ public class App {
     static Scanner ler = new Scanner(System.in);
     static Cliente cliente1 = null, cliente2 = null;
     static Carro carro1 = null, carro2 = null;
+    static Cliente listaCliente [] = new Cliente [10];
+    static Carro listaCarro [] = new Carro [10];
+
     public static void main(String[] args) throws Exception {
         Textos textos = new Textos();
         String opcao = "";
@@ -20,6 +23,8 @@ public class App {
             switch (opcao) {
                 case "1":
                 cliente1 = CadastrarCliente();
+                listaCliente[0] = cliente2;
+
                 System.out.println("Deseja cadastrar outro cliente?");
 
                 do {
@@ -28,6 +33,7 @@ public class App {
                     switch (opcao) {
                         case "1":
                                 cliente2 = CadastrarCliente();
+                                    listaCliente[1] = cliente2;
                             break;
                         case "2":
                             break;
@@ -41,6 +47,7 @@ public class App {
 
                 case "2":
                         carro1 = CadastrarCarro();
+                            listaCarro[0] = carro1;
                         System.out.println("Deseja cadastrar outro carro?");
                         do {
                         System.out.print(textos.getMenuSimNao());
@@ -48,6 +55,7 @@ public class App {
                         switch (opcao) {
                             case "1":
                                     carro2 = CadastrarCarro();
+                                        listaCarro[1] = carro2;
                                 break;
                             case "2":
                                 break;
@@ -60,7 +68,8 @@ public class App {
 
                     break;
 
-                case "3":
+                case "3": //  Transação
+                    
 
                     break;
                 case "0":
