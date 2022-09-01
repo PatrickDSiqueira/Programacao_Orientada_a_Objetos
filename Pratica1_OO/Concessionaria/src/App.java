@@ -1,13 +1,16 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import br_com_pratica1_questao1_concessionaria.Carro;
 import br_com_pratica1_questao1_concessionaria.Cliente;
+import br_com_pratica1_questao1_concessionaria.LimpaConsole;
 import br_com_pratica1_questao1_concessionaria.Textos;
 import br_com_pratica1_questao1_concessionaria.Transacao;
 
 public class App {
+    static LimpaConsole limpar = new LimpaConsole();
     static Scanner ler = new Scanner(System.in);
     static Cliente cliente1 = null, cliente2 = null;
     static Carro carro1 = null, carro2 = null;
@@ -20,7 +23,8 @@ public class App {
     static List < Transacao > listaTransacoes = new ArrayList < Transacao >();
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException, IOException {
+        limpar.Console();
         ImplementarCLientesParaTeste();
         boolean saidaMenu = false;
 
@@ -157,5 +161,92 @@ public static Cliente EscolherCliente(String args) {
             System.out.print("Valor : ");
                 Double valor = ler.nextDouble();
             return new Carro(marca, modelo, ano, valor);
+        }
+        public static Scanner getLer() {
+            return ler;
+        }
+
+        public static void setLer(Scanner ler) {
+            App.ler = ler;
+        }
+
+        public static Cliente getCliente1() {
+            return cliente1;
+        }
+
+        public static void setCliente1(Cliente cliente1) {
+            App.cliente1 = cliente1;
+        }
+
+        public static Cliente getCliente2() {
+            return cliente2;
+        }
+
+        public static void setCliente2(Cliente cliente2) {
+            App.cliente2 = cliente2;
+        }
+
+        public static Carro getCarro1() {
+            return carro1;
+        }
+
+        public static void setCarro1(Carro carro1) {
+            App.carro1 = carro1;
+        }
+
+        public static Carro getCarro2() {
+            return carro2;
+        }
+
+        public static void setCarro2(Carro carro2) {
+            App.carro2 = carro2;
+        }
+
+        public static Textos getTextos() {
+            return textos;
+        }
+
+        public static void setTextos(Textos textos) {
+            App.textos = textos;
+        }
+
+        public static String getOpcao() {
+            return opcao;
+        }
+
+        public static void setOpcao(String opcao) {
+            App.opcao = opcao;
+        }
+
+        public static Transacao getTransacao1() {
+            return Transacao1;
+        }
+
+        public static void setTransacao1(Transacao transacao1) {
+            Transacao1 = transacao1;
+        }
+
+        public static List<Cliente> getListaClientes() {
+            return listaClientes;
+        }
+
+        public static void setListaClientes(List<Cliente> listaClientes) {
+            App.listaClientes = listaClientes;
+        }
+
+        public static List<Carro> getListaCarros() {
+            return listaCarros;
+        }
+
+        public static void setListaCarros(List<Carro> listaCarros) {
+            App.listaCarros = listaCarros;
+        }
+
+        public static List<Transacao> getListaTransacoes() {
+            return listaTransacoes;
+        }
+
+        public static void setListaTransacoes(List<Transacao> listaTransacoes) {
+            App.listaTransacoes = listaTransacoes;
         }
     }
