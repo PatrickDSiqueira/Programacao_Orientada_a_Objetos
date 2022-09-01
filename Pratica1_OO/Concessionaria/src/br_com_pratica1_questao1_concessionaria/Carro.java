@@ -8,19 +8,19 @@ public class Carro {
     private String modelo;
     private int ano;
     private double valor;
-
-    public Carro(String marca, String modelo, int ano, double valor){
-            this.marca = marca;
-            this.modelo = modelo;
-            this.ano = ano;
-            this.valor = valor;
-
+    private String cor;
+    private String chassi;
+    
+    public Carro(String marca, String modelo, int ano, double valor, String cor, String chassi) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.valor = valor;
+        this.cor = cor;
+        this.chassi = chassi;
     }
 
-    @Override
-    public String toString() {
-        return "Carro [ano=" + ano + ", marca=" + marca + ", modelo=" + modelo + ", valor=" + valor + "]";
-    }
 
+   
     
 }

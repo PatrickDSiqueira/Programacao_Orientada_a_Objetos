@@ -18,7 +18,6 @@ public class EmpregadoFaculdade {
 
     public String getInfo(){
         return "nome:" + this.nome + " com salario " + getGastos();
-
     }
 
 }

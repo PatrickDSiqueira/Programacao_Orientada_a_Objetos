@@ -7,69 +7,54 @@ public class Cliente {
 
     private String nome;
     private String cpf;
-    private int id;
     private long numeroTelefone;
-    private int anoNascimeto;
+    private int anoNascimento;
+    private String endereco;
 
-    public Cliente(String nome, String cpf, long numeroTelefone, int anoNascimeto){
+    public Cliente(String nome, String cpf, long numeroTelefone, int anoNascimento, String endereco) {
         this.nome = nome;
         this.cpf = cpf;
-        this.id = aleatorio.nextInt(1000);
         this.numeroTelefone = numeroTelefone;
-        this.anoNascimeto = anoNascimeto;
+        this.anoNascimento = anoNascimento;
+        this.endereco = endereco;
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getCpf() {
+        return cpf;
+    }
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    public long getNumeroTelefone() {
+        return numeroTelefone;
+    }
+    public void setNumeroTelefone(long numeroTelefone) {
+        this.numeroTelefone = numeroTelefone;
+    }
+    public int getAnoNascimento() {
+        return anoNascimento;
+    }
+    public void setAnoNascimento(int anoNascimento) {
+        this.anoNascimento = anoNascimento;
+    }
+    public String getEndereco() {
+        return endereco;
+    }
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     @Override
     public String toString() {
-        return "Cliente [aleatorio=" + aleatorio + ", anoNascimeto=" + anoNascimeto + ", cpf=" + cpf + ", id=" + id
-                + ", nome=" + nome + ", numeroTelefone=" + numeroTelefone + "]";
+        return "Cliente [aleatorio=" + aleatorio + ", anoNascimento=" + anoNascimento + ", cpf=" + cpf + ", endereco="
+                + endereco + ", nome=" + nome + ", numeroTelefone=" + numeroTelefone + "]";
     }
 
-    public Random getAleatorio() {
-        return aleatorio;
-    }
 
-    public void setAleatorio(Random aleatorio) {
-        this.aleatorio = aleatorio;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public long getNumeroTelefone() {
-        return numeroTelefone;
-    }
-
-    public void setNumeroTelefone(long numeroTelefone) {
-        this.numeroTelefone = numeroTelefone;
-    }
-
-    public int getAnoNascimeto() {
-        return anoNascimeto;
-    }
-
-    public void setAnoNascimeto(int anoNascimeto) {
-        this.anoNascimeto = anoNascimeto;
-    }
 }

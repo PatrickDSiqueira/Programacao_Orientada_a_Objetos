@@ -10,7 +10,7 @@ public class Transacao {
     private int idTransacao;
     private Cliente destinatario;
     private Cliente remetente;
-
+    
     public Transacao( double valor, Cliente destinatario, Cliente remetente){
         this.dataRealizacao = new Date();
         this.valor = valor; 

@@ -25,13 +25,13 @@ public class App {
 
     public static void main(String[] args) throws InterruptedException, IOException {
         limpar.Console();
-        ImplementarCLientesParaTeste();
         boolean saidaMenu = false;
 
         do {
             System.out.print(textos.getMenuOpcao());
                 opcao = ler.next();
-
+        limpar.Console();
+                
             switch (opcao) {
                 case "1":
                 cliente1 = CadastrarCliente();
@@ -99,13 +99,6 @@ public class App {
         ler.close();
         }
 
-        private static void ImplementarCLientesParaTeste() {
-            cliente1=new Cliente("MArcelo", "16053730605",319845555, 2001);
-            listaClientes.add(cliente1);
-            listaClientes.add(new Cliente("ana", "cpf", 123, 2014));
-
-    }
-
         public  static void FazerTransacao() {
             Cliente remetente = EscolherCliente("Quem é você :");
             Cliente destinatario = EscolherCliente("Quem será o favorecido : ");
@@ -144,11 +137,14 @@ public static Cliente EscolherCliente(String args) {
                 long numeroTelefone = ler.nextLong(); 
 
                 System.out.print("Ano de Nascimento : " );
-                int anoNascimeto = ler.nextInt();
+                int anoNascimento = ler.nextInt();
+
+                System.out.println("Insira oendereço : ");
+                    String endereco = ler.nextLine();
 
                 System.out.println("Cliente cadastrado!");
 
-                return  new Cliente(nome, cpf, numeroTelefone, anoNascimeto);
+                return new Cliente(nome, cpf, numeroTelefone, anoNascimento, endereco);
         }
 
         public static Carro CadastrarCarro(){
@@ -160,7 +156,11 @@ public static Cliente EscolherCliente(String args) {
                 int ano = ler.nextInt(); 
             System.out.print("Valor : ");
                 Double valor = ler.nextDouble();
-            return new Carro(marca, modelo, ano, valor);
+            System.out.println("Cor do carro : ");
+                String cor = ler.next();
+            System.out.println("Chassi : ");
+                String chassi = ler.next();
+            return new Carro(marca, modelo, ano, valor,cor, chassi);
         }
         public static Scanner getLer() {
             return ler;
