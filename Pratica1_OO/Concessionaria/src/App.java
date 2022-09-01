@@ -21,6 +21,7 @@ public class App {
 
 
     public static void main(String[] args) {
+        ImplementarCLientesParaTeste();
         boolean saidaMenu = false;
 
         do {
@@ -94,27 +95,39 @@ public class App {
         ler.close();
         }
 
+        private static void ImplementarCLientesParaTeste() {
+            cliente1=new Cliente("MArcelo", "16053730605",319845555, 2001);
+            listaClientes.add(cliente1);
+            listaClientes.add(new Cliente("ana", "cpf", 123, 2014));
+
+    }
+
         public  static void FazerTransacao() {
+            Cliente remetente = EscolherCliente("Quem é você :");
+            Cliente destinatario = EscolherCliente("Quem será o favorecido : ");
+            System.out.print("Qual será o valor : ");
+            double valor = ler.nextDouble();
 
-    //         System.out.println("Escolha um Remetente : ");
-    //             Cliente destinatario = EscolherCliente(); 
-    //         Cliente remetente = null;
+            new Transacao(valor, destinatario, remetente);
 
-    //         double valor ;
-    //         int idTransacao ;
-
-    //         Transacao1 = new Transacao(valor, idTransacao, destinatario, remetente);
-    // }
-
-        public static Cliente EscolherCliente() {
-
-                for (Cliente cliente : listaClientes) {
-                    System.out.println(cliente.getNome());
-                }
-
-                return null;
-            }
+}
+public static Cliente EscolherCliente(String args) {
+    System.out.println(args);
+    int op;
+        for (int i = 0;  i < listaClientes.size(); i++) {
+            System.out.println(i+" - "+listaClientes.get(i).getNome());
         }
+        System.out.print("Opção - > ");
+        op = ler.nextInt();
+        if((op < 0) || (op > listaClientes.size() )){    
+            System.out.println("opcao inválida");
+            EscolherCliente(args);
+        }else{
+            return listaClientes.get(op);
+        }
+
+        return null;
+    }
 
         public static Cliente CadastrarCliente(){
             System.out.print("Nome : " );
