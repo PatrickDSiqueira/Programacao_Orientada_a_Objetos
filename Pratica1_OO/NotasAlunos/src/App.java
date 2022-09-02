@@ -1,5 +1,6 @@
 import java.util.Scanner;
-import br_com_pratica1_questao3_notasAlunos.Aluno;
+
+
 
 public class App {
     public static void main(String[] args) throws Exception {
