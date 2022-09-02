@@ -1,4 +1,4 @@
-package br_com_pratica1_questao1_concessionaria;
+package br.com.pratica01.concessionaria;
 
 import java.io.IOException;
 

@@ -3,11 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import br_com_pratica1_questao1_concessionaria.Carro;
-import br_com_pratica1_questao1_concessionaria.Cliente;
-import br_com_pratica1_questao1_concessionaria.LimpaConsole;
-import br_com_pratica1_questao1_concessionaria.Textos;
-import br_com_pratica1_questao1_concessionaria.Transacao;
+import br.com.pratica01.concessionaria.Carro;
+import br.com.pratica01.concessionaria.Cliente;
+import br.com.pratica01.concessionaria.LimpaConsole;
+import br.com.pratica01.concessionaria.Textos;
+import br.com.pratica01.concessionaria.Transacao;
 
 public class App {
     static LimpaConsole limpar = new LimpaConsole();
