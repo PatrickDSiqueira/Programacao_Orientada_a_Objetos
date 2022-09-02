@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-
+import br.com.pratica1.notasalunos.Aluno;
 
 public class App {
     public static void main(String[] args) throws Exception {

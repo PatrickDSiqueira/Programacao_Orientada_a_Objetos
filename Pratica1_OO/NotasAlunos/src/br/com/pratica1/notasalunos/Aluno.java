@@ -1,4 +1,4 @@
-
+package br.com.pratica1.notasalunos;
 
 public class Aluno {
     private String nome;
