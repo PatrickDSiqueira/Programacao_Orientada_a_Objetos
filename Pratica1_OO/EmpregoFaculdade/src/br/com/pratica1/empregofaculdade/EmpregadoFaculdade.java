@@ -1,4 +1,4 @@
-package br_com_pratica1_questao2_empregoFaculdade;
+package br.com.pratica1.empregofaculdade;
 
 public class EmpregadoFaculdade {
     private String nome;

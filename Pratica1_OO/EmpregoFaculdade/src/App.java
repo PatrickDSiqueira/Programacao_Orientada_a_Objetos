@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import br_com_pratica1_questao2_empregoFaculdade.EmpregadoFaculdade;
+import br.com.pratica1.empregofaculdade.EmpregadoFaculdade;
 
 public class App {
     public static void main(String[] args) throws Exception {
