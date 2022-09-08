@@ -1,3 +1,5 @@
+package br.com.aula2.exercicio;
+
 /**
  * ContaCorrente
  */

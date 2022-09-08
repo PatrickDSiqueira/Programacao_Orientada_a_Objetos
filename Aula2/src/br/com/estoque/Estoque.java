@@ -11,4 +11,37 @@ public class Estoque {
         this.qtdAtual = qtdAtual;
         this.qtdMinima = qtdMinima;
     }
+        // set
+    public void setNome(String nome)
+    {
+        this.nome = nome;
+    }
+
+    public void setQtdAtual(int qtdAtual)
+    {
+        this.qtdAtual = qtdAtual;
+    }
+
+    public void setQtdMinima(int qtdMinima)
+    {
+        this.qtdMinima = qtdMinima;
+    }
+        //get
+    
+    public String getNome()
+    {
+        return this.nome;
+    }
+
+    public int getqtdMinima()
+    {
+        return this.qtdMinima;
+    }
+    
+    public int getQtdAtual()
+    {
+        return this.qtdAtual;
+    }
 }
+
+

@@ -1,6 +1,10 @@
 /**
  * Exemplo1
  */
+
+package br.com.aula2.exercicio;
+
+
 public class Exemplo1 {
     public static void main(String[] args) {
         int x, y, num, soma;
