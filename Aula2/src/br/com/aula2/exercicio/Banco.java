@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// package br.com.aula2.exercicio.br.com.aula2.exercicio;
+package br.com.aula2.exercicio.br.com.aula2.exercicio;
 
 // objeto é uma instancia da classe
 // intancia é chamar o contrutor atraves do new
