@@ -5,6 +5,8 @@ public class Estoque {
     private int qtdAtual;
     private int qtdMinima;
 
+    public Estoque (){};
+
     public Estoque (String nome, int qtdAtual, int qtdMinima)
     {
         this.nome  = nome;
@@ -37,7 +39,7 @@ public class Estoque {
     {
         return this.qtdMinima;
     }
-    
+
     public int getQtdAtual()
     {
         return this.qtdAtual;
