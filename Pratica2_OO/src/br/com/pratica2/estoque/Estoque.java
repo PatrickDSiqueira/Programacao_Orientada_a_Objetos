@@ -1,4 +1,4 @@
-package br.com.pratica2_oo;
+package br.com.pratica2.estoque;
 
 public class Estoque {
     

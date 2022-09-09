@@ -1,4 +1,4 @@
-import br.com.pratica2_oo.Estoque;
+import br.com.pratica2.estoque.Estoque;
 
 public class App {
     public static void main(String[] args) throws Exception {
