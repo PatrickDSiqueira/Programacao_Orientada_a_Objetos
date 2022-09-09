@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Principal {
+    private static final String DADO_INVALIDO = "Dado inválido!";
     static Scanner ler = new Scanner(System.in);
     static Rendimento rendimento1 = new Rendimento();
     static Double investimentoInicial; 
@@ -14,10 +15,11 @@ public class Principal {
 
 
         adicionarInvestimentoInicial();
-        
-        System.out.print("Taxa do Rendimento ( % a/m ): ");
-            taxaMes = ler.nextDouble();
-            rendimento1.setTaxaMes(taxaMes);
+
+        adicionarTaxaMes();
+            // System.out.print("Taxa do Rendimento ( % a/m ): ");
+            //     taxaMes = ler.nextDouble();
+            //     rendimento1.setTaxaMes(taxaMes);
 
         System.out.print("Número de meses: ");
             numeroMeses = ler.nextInt();
@@ -37,8 +39,23 @@ public class Principal {
         } 
         catch (InputMismatchException exception) {
             limparScanner();
-            System.out.println("Dado inválido" );
+            System.out.println(DADO_INVALIDO);
             adicionarInvestimentoInicial();
+        }
+    }
+
+    private static void adicionarTaxaMes()
+    {
+        System.out.print("Taxa do Rendimento ( % a/m ): ");
+        try{
+            taxaMes = ler.nextDouble();
+            rendimento1.setTaxaMes(taxaMes);
+            limparScanner();
+        }
+        catch(InputMismatchException  exception){
+            limparScanner();
+            System.out.println(DADO_INVALIDO);
+            adicionarTaxaMes();
         }
     }
 
