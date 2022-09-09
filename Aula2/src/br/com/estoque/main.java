@@ -19,6 +19,8 @@ public class main {
 
         System.out.println("Produto " + estoque2.getNome() + "\n Quantidade Minima " + estoque2.getQtdAtual() + "\n Quantidade Atual " + estoque2.getQtdAtual());
 
+        System.out.println("Precisa repor o estoque de " + estoque1.getNome() + " ? "+ estoque1.precisaRepor());
+
         estoque1.mostrar();
         estoque2.mostrar();
     }

@@ -61,6 +61,19 @@ public class Estoque {
         {
             return " Produto " + this.nome + "\n Quantidade Minima " + this.qtdMinima + "\n Quantidade Atual " + this.qtdAtual;
         }
+        
+        public boolean precisaRepor()
+        {
+            if (this.qtdAtual <= this.qtdMinima)
+            {
+                return true;
+            } else 
+            {
+                return false;
+            }
+
+        }
+
     }
 
 
