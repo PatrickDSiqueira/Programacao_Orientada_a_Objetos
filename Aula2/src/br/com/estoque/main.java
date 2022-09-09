@@ -18,5 +18,8 @@ public class main {
         estoque2.setQtdMinima(20);
 
         System.out.println("Produto " + estoque2.getNome() + "\n Quantidade Minima " + estoque2.getQtdAtual() + "\n Quantidade Atual " + estoque2.getQtdAtual());
+
+        estoque1.mostrar();
+        estoque2.mostrar();
     }
 }

@@ -59,7 +59,7 @@ public class Estoque {
 
         public String mostrar()
         {
-            return "Produto " + this.nome + "\n Quantidade Minima " + this.qtdMinima + "\n Quantidade Atual " + this.qtdAtual;
+            return " Produto " + this.nome + "\n Quantidade Minima " + this.qtdMinima + "\n Quantidade Atual " + this.qtdAtual;
         }
     }
 
