@@ -44,6 +44,19 @@ public class Estoque {
     {
         return this.qtdAtual;
     }
+
+    // method
+
+        public void darBaixa(int qtde)
+        {
+            if (qtde < this.qtdAtual){
+                this.qtdAtual -= qtde;
+                System.out.println("O estoque agora é " + this.qtdAtual);
+            }else{
+                System.out.println("Não é possível realizar esta baixa, o estoque ficará negativa.");
+            }
+
+        }
 }
 
 
