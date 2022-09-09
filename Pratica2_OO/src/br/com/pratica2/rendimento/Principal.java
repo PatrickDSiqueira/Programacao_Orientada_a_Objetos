@@ -17,16 +17,23 @@ public class Principal {
         adicionarInvestimentoInicial();
 
         adicionarTaxaMes();
-            // System.out.print("Taxa do Rendimento ( % a/m ): ");
-            //     taxaMes = ler.nextDouble();
-            //     rendimento1.setTaxaMes(taxaMes);
 
+        adicionarNumeroMeses();
+            System.out.printf("O rendimento do investimento de R$ %.2f, com uma taxa de %1.0f%% a/m mês(es), durante %d será de R$ %.2f", rendimento1.getInvestimentoInicial(), rendimento1.getTaxaMes(), rendimento1.numeroMeses, rendimento1.calcularRemdimento() );
+    }
+    private static void adicionarNumeroMeses() 
+    {
         System.out.print("Número de meses: ");
+        try{
             numeroMeses = ler.nextInt();
             rendimento1.setNumeroMeses(numeroMeses);
-
-            System.out.printf("O rendimento do investimento de R$ %.2f, com uma taxa de %1.0f%% a/m mês(es), durante %d será de R$ %.2f", rendimento1.getInvestimentoInicial(), rendimento1.getTaxaMes(), rendimento1.numeroMeses, rendimento1.calcularRemdimento() );
-        
+            limparScanner();
+        }
+        catch(InputMismatchException  exception){
+            limparScanner();
+            System.out.println(DADO_INVALIDO);
+            adicionarNumeroMeses();
+        }
     }
 
     private static void adicionarInvestimentoInicial() 
