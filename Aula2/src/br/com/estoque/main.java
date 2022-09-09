@@ -10,5 +10,13 @@ public class main {
 
         estoque1.setNome("Caneta Azul");
         System.out.println(estoque1.getNome());
+
+        Estoque estoque2 = new Estoque();
+
+        estoque2.setNome("Apagador");
+        estoque2.setQtdAtual(10);
+        estoque2.setQtdMinima(20);
+
+        System.out.println("Produto " + estoque2.getNome() + "\n Quantidade Minima " + estoque2.getQtdAtual() + "\n Quantidade Atual " + estoque2.getQtdAtual());
     }
 }
