@@ -55,8 +55,12 @@ public class Estoque {
             }else{
                 System.out.println("Não é possível realizar esta baixa, o estoque ficará negativa.");
             }
-
         }
-}
+
+        public String mostrar()
+        {
+            return "Produto " + this.nome + "\n Quantidade Minima " + this.qtdMinima + "\n Quantidade Atual " + this.qtdAtual;
+        }
+    }
 
 
