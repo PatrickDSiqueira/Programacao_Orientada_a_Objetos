@@ -1,7 +1,7 @@
 package br.com.estoque;
 
-public class main {
-    public static void main(String[] args) {
+public class Principal {
+    public static void main( String[] args) {
         Estoque estoque1 = new Estoque("caneta", 100, 1);
 
         System.out.println(estoque1.getNome());
