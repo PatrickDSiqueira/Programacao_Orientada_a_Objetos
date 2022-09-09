@@ -53,7 +53,6 @@ public class App {
 
         System.out.println("De acordo com os com notas todas as notas o aluno está " + aluno1.AvaliarRecuperação(notaAV1, notaAV2, notaAE));
 
-
             ler.close();
     }
 }

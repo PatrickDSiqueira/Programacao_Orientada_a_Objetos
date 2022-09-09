@@ -1,6 +1,7 @@
-package br.com.estoque;
+package br.com.pratica2_oo;
 
 public class Estoque {
+    
     private String nome;
     private int qtdAtual;
     private int qtdMinima;
@@ -73,7 +74,5 @@ public class Estoque {
             }
 
         }
-
-    }
-
-
+    
+}

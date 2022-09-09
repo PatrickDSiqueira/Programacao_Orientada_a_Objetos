@@ -1,7 +1,7 @@
-package br.com.estoque;
+import br.com.pratica2_oo.Estoque;
 
-public class Principal {
-    public static void main( String[] args) {
+public class App {
+    public static void main(String[] args) throws Exception {
         Estoque estoque1 = new Estoque("caneta", 100, 1);
 
         System.out.println(estoque1.getNome());
