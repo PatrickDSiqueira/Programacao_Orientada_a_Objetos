@@ -19,8 +19,16 @@ public class Principal {
         adicionarTaxaMes();
 
         adicionarNumeroMeses();
-            System.out.printf("O rendimento do investimento de R$ %.2f, com uma taxa de %1.0f%% a/m mês(es), durante %d será de R$ %.2f", rendimento1.getInvestimentoInicial(), rendimento1.getTaxaMes(), rendimento1.numeroMeses, rendimento1.calcularRemdimento() );
+
+        mostrarRendimento();
+
+        // Fim main
     }
+    private static void mostrarRendimento() {
+        System.out.printf("O rendimento do investimento de R$ %.2f, com uma taxa de %1.0f%% a/m mês(es), durante %d será de R$ %.2f", rendimento1.getInvestimentoInicial(), rendimento1.getTaxaMes(), rendimento1.numeroMeses, rendimento1.calcularRemdimento() );
+        
+    }
+
     private static void adicionarNumeroMeses() 
     {
         System.out.print("Número de meses: ");
