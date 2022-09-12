@@ -28,7 +28,7 @@ public class App {
         boolean saidaMenu = false;
 
         do {
-            System.out.print(textos.getMenuOpcao());
+                textos.mostrarMenuPrincipal();
                 opcao = ler.next();
         limpar.Console();
                 
@@ -36,11 +36,10 @@ public class App {
                 case "1":
                 cliente1 = CadastrarCliente();
                     listaClientes.add(cliente1);
-
                 System.out.println("Deseja cadastrar outro cliente?");
 
                 do {
-                    System.out.print(textos.getMenuSimNao());
+                    textos.mostrarSimNao();
                     opcao = ler.next();
                     switch (opcao) {
                         case "1":
@@ -62,7 +61,7 @@ public class App {
                             listaCarros.add(carro1);
                         System.out.println("Deseja cadastrar outro carro?");
                         do {
-                        System.out.print(textos.getMenuSimNao());
+                        textos.mostrarSimNao();
                         opcao = ler.next();
                         switch (opcao) {
                             case "1":
