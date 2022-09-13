@@ -14,4 +14,9 @@ public class Textos {
     {
         System.out.print("1 - Cadastrar Cliente \n2 - Cadastrar Carro \n3 - Realizar Transação \n0 - Sair\nOpção - >");
     }
+
+    public void mostrarRealizacaoTransacao () 
+    {
+        System.out.println("Transação realizada com sucesso ! ! ");
+    }
 }

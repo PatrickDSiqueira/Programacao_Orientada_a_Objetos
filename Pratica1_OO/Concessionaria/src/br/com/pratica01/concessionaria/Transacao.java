@@ -4,6 +4,7 @@ import java.util.Random;
 
 
 public class Transacao {
+    Textos texto = new Textos();
     Random aleatorio = new Random();
     private Date dataRealizacao;
     private double valor;
@@ -17,6 +18,8 @@ public class Transacao {
         this.idTransacao = aleatorio.nextInt();
         this.destinatario = destinatario;
         this.remetente = remetente;
+
+        texto.mostrarRealizacaoTransacao();
     }
     
 }

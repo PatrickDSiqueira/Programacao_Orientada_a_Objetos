@@ -86,7 +86,6 @@ public class App {
                 case "0":
                         saidaMenu = true;
                         System.out.println("Programa Finalizado!");
-                        System.out.println(saidaMenu);
 
                     break;
 
@@ -138,16 +137,16 @@ public static Cliente EscolherCliente(String args) {
                 System.out.print("Ano de Nascimento : " );
                 int anoNascimento = ler.nextInt();
 
-                System.out.println("Insira oendereço : ");
+                System.out.print("Insira o endereço : ");
                     String endereco = ler.nextLine();
 
-                System.out.println("Cliente cadastrado!");
+                System.out.print("Cliente cadastrado!");
 
                 return new Cliente(nome, cpf, numeroTelefone, anoNascimento, endereco);
         }
 
         public static Carro CadastrarCarro(){
-            System.out.print("marca : ");
+            System.out.print("Marca : ");
                 String marca = ler.next(); 
             System.out.print("Modelo : ");
                 String modelo = ler.next(); 
@@ -155,9 +154,9 @@ public static Cliente EscolherCliente(String args) {
                 int ano = ler.nextInt(); 
             System.out.print("Valor : ");
                 Double valor = ler.nextDouble();
-            System.out.println("Cor do carro : ");
+            System.out.print("Cor do Carro : ");
                 String cor = ler.next();
-            System.out.println("Chassi : ");
+            System.out.print("Chassi : ");
                 String chassi = ler.next();
             return new Carro(marca, modelo, ano, valor,cor, chassi);
         }
