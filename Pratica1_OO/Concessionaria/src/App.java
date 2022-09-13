@@ -86,7 +86,6 @@ public class App {
                 case "0":
                         saidaMenu = true;
                         System.out.println("Programa Finalizado!");
-                        System.out.println(saidaMenu);
 
                     break;
 
