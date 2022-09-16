@@ -1,5 +1,7 @@
 package br.com.pratica2.rendimento;
 
+import java.text.NumberFormat;
+
 public class Rendimento {
     public Double investimentoInicial; 
     public Double taxaMes;
@@ -45,11 +47,16 @@ public class Rendimento {
         this.numeroMeses = numeroMeses;
     }
 
-    public Double calcularRemdimento(){
-        // calcular juros compostos M =C (1+i) ^ t
+    public void calcularRendimento(){
+        Double rendimentoMes= this.investimentoInicial;
+        System.out.println("Valor Inicial:" + NumberFormat.getCurrencyInstance().format(rendimentoMes));
 
-        Double rendimentoTotal = ( investimentoInicial * Math.pow((1+taxaMes/100), numeroMeses) );
+        for (int i = 0; i < getNumeroMeses(); i++) {
 
-        return rendimentoTotal;
+                rendimentoMes += rendimentoMes * getTaxaMes()/100;  
+
+            System.out.printf("\t Mês %d: \t %s \n", i++, NumberFormat.getCurrencyInstance().format(rendimentoMes) );
+        }
+            
     }
 }
