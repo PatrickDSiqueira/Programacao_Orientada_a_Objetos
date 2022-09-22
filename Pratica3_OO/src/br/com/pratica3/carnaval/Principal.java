@@ -72,7 +72,7 @@ public class Principal {
                     break;
             }
 
-        } while (!option.equals(0));
+        } while (!option.equals("0"));
     }
 
 }
