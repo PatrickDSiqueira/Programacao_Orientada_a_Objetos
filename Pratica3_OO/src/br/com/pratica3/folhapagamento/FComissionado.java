@@ -6,7 +6,8 @@ public class FComissionado  extends Funcionario{
 
     @Override
     public double calcularProventos() {
-        // TODO Auto-generated method stub
-        return super.calcularProventos();
+        double proventos = super.getSalario() + (this.vendas * this.percentual);
+        return proventos;
+        
     }
 }
