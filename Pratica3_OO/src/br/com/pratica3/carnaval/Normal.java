@@ -10,8 +10,8 @@ public class Normal extends Ingresso {
         super(valor);
     }
 
-    public void imprimeValorIngresso() {
+    public String imprimeValorIngresso() {
         f.setMaximumFractionDigits(2);
-        System.out.println("O valor do ingresso é : " + f.format(this.valor ) + " Ingresso Normal");
+        return ("O valor do ingresso é : " + f.format(this.valor ) + " Ingresso Normal");
     }
 }
