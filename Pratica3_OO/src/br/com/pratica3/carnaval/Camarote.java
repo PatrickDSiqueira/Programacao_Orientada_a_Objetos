@@ -19,9 +19,10 @@ public class Camarote  extends Ingresso{
     NumberFormat f = NumberFormat.getCurrencyInstance();
 
 
-    public void imprimeValorIngresso() {
+    public String imprimeValorIngresso() {
+        
         f.setMaximumFractionDigits(2);
-        System.out.println("O valor do ingresso é : " + f.format(this.valor + this.valorAdicional) + " Localizacao : "
+        return ("O valor do ingresso é : " + f.format(this.valor + this.valorAdicional) + " Localizacao : "
                 + this.localizacao + " Ingresso Camarote");
     }
 
@@ -44,15 +45,4 @@ public class Camarote  extends Ingresso{
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
     }
-
-
-    public NumberFormat getF() {
-        return f;
-    }
-
-
-    public void setF(NumberFormat f) {
-        this.f = f;
-    }
-
 }

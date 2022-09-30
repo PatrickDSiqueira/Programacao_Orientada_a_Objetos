@@ -2,77 +2,76 @@ package br.com.pratica3.carnaval;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Principal {
+    static int option;
 
     static Scanner ler = new Scanner(System.in);
 
-    static String option = "";
     static Double valor = null;
-    static Double valorAdicional= null;
+    static Double valorAdicional = null;
     static String localizacao = null;
 
     public static void main(String[] args) {
 
         do {
-            System.out.println("Digite uma opção : ");
-            System.out.println("\t(1) Ingresso Normal \n\t(2) VIP  \n\t(3) Camarote");
-            System.out.print("\t   -> ");
-                option = ler.nextLine();
+            option = Integer.parseInt(JOptionPane.showInputDialog("\t(1) Ingresso Normal \n\t(2) VIP  \n\t(3) Camarote\n\t(0) Sair"));
 
             switch (option) {
-                case "1":
-                    System.out.print("Digite o valor : ");
-                    valor = ler.nextDouble();
-                    ler = new Scanner(System.in);
+                case 1:
 
+                    valor = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor : "));
 
                     Normal ingressoNormal = new Normal(valor);
-                    ingressoNormal.imprimeValorIngresso();
-                    ler = new Scanner(System.in);
+
+                    JOptionPane.showMessageDialog(null, ingressoNormal.imprimeValorIngresso(), "Ingresso Normal",
+                            JOptionPane.DEFAULT_OPTION);
 
                     break;
 
-                case "2":
-                    System.out.print("Digite o valor : ");
-                    valor = ler.nextDouble();
-                    ler = new Scanner(System.in);
+                case 2:
 
+                    valor = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor : "));
 
-                    System.out.print("Digite o valor adicional: ");
-                    valorAdicional = ler.nextDouble();
-                    ler = new Scanner(System.in);
-
+                    valorAdicional = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor adicional: "));
 
                     VIP ingressoVIP = new VIP(valor, valorAdicional);
-                    ingressoVIP.imprimeValorIngresso();
+
+                    JOptionPane.showMessageDialog(null, ingressoVIP.imprimeValorIngresso(), "Ingresso Normal",
+                            JOptionPane.DEFAULT_OPTION);
+
                     break;
 
-                case "3":
-                System.out.print("Digite o valor : ");
-                valor = ler.nextDouble();
-                ler = new Scanner(System.in);
+                case 3:
 
+                    valor = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor : "));
 
-                System.out.print("Digite o valor adicional: ");
-                valorAdicional = ler.nextDouble();
-                ler = new Scanner(System.in);
+                    valorAdicional = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor adicional: "));
 
+                    localizacao = JOptionPane.showInputDialog("Digite a localização: ");
 
-                System.out.print("Digite a localização: ");
-                localizacao = ler.nextLine();
-                ler = new Scanner(System.in);
+                    Camarote ingressoCamarote = new Camarote(valor, valorAdicional, localizacao);
 
+                    JOptionPane.showMessageDialog(null, ingressoCamarote.imprimeValorIngresso());
 
-                Camarote ingressoCamarote = new Camarote(valor, valorAdicional, localizacao);
-                ingressoCamarote.imprimeValorIngresso();
                     break;
 
                 default:
-                    System.out.println("Opção inválida");
+
+                    JOptionPane.showMessageDialog(null, "Opção inválida");
+
+                    break;
+
+                case 0:
+
+                    JOptionPane.showMessageDialog(null, "Programa encerrado", "Encerramento",
+                            JOptionPane.INFORMATION_MESSAGE);
+
                     break;
             }
 
-        } while (!option.equals(0));
+        } while (option != 0);
     }
 
 }
