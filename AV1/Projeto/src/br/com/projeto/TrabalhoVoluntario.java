@@ -22,4 +22,20 @@ public class TrabalhoVoluntario extends Projeto {
     public String ImprimeProjeto() {
         return null;
     }
+
+    public String getTipoTrabalho() {
+        return tipoTrabalho;
+    }
+
+    public void setTipoTrabalho(String tipoTrabalho) {
+        this.tipoTrabalho = tipoTrabalho;
+    }
+
+    public int getDuracaoTrabalho() {
+        return duracaoTrabalho;
+    }
+
+    public void setDuracaoTrabalho(int duracaoTrabalho) {
+        this.duracaoTrabalho = duracaoTrabalho;
+    }
 }
