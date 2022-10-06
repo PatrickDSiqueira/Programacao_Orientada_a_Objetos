@@ -1,10 +1,16 @@
-/**
- * Funcionario
- */
+package br.com.pratica03.folhadepagamento;
+
+
 public abstract class  Funcionario {
     private int matricula;
     private String nome;
     private double salario;
+
+    public Funcionario(int matricula, String nome, double salario) {
+        this.matricula = matricula;
+        this.nome = nome;
+        this.salario = salario;
+    }
 
     public double calcularProventos(){
         return getSalario();

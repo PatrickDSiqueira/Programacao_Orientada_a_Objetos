@@ -1,4 +1,4 @@
-package br.com.pratica3.carnaval;
+package br.com.pratica03.carnaval;
 
 import java.text.NumberFormat;
 // import java.util.Formatter;
@@ -10,8 +10,8 @@ public class Normal extends Ingresso {
         super(valor);
     }
 
-    public String imprimeValorIngresso() {
+    public void imprimeValorIngresso() {
         f.setMaximumFractionDigits(2);
-        return ("O valor do ingresso é : " + f.format(this.valor ) + " Ingresso Normal");
+        System.out.println("O valor do ingresso é : " + f.format(this.valor ) + " Ingresso Normal");
     }
 }

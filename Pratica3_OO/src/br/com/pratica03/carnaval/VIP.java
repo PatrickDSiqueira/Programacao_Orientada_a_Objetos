@@ -1,4 +1,4 @@
-package br.com.pratica3.carnaval;
+package br.com.pratica03.carnaval;
 
 import java.text.NumberFormat;
 
@@ -9,15 +9,13 @@ public class VIP extends Ingresso {
 
 
     public VIP(Double valor, Double valorAdicional) {
-
         super(valor);
-
         this.valorAdicional = valorAdicional;
     }
 
-    public String imprimeValorIngresso(){
+    public void imprimeValorIngresso(){
         f.setMaximumFractionDigits(2);
-        return ("O valor do ingresso é " + f.format(this.valor + this.valorAdicional) + " Ingresso VIP");
+        System.out.println("O valor do ingresso é " + f.format(this.valor + this.valorAdicional) + " Ingresso VIP");
     }
     public Double getValorAdicional() {
         return valorAdicional;
@@ -25,4 +23,11 @@ public class VIP extends Ingresso {
     public void setValorAdicional(Double valorAdicional) {
         this.valorAdicional = valorAdicional;
     }
+    public NumberFormat getF() {
+        return f;
+    }
+    public void setF(NumberFormat f) {
+        this.f = f;
+    }
+    
 }
