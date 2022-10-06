@@ -1,14 +1,18 @@
 package br.com.pratica03.veiculo;
 
-public class Veiculo {
+import javax.swing.JOptionPane;
+
+public  abstract class Veiculo {
     
     private String placa;
     private int ano;
 
-    public void veiculo(){
+    public Veiculo(){
+        this.ano = 0;
+        this.placa = "";
     }
 
-    public void veiculo (String placa, int ano){
+    public Veiculo (String placa, int ano){
         this.ano = ano;
         this.placa = placa;
     }
@@ -27,5 +31,13 @@ public class Veiculo {
 
     public void setAno(int ano) {
         this.ano = ano;
+    }
+
+    public void setAno(String ano) {
+        this.ano = Integer.parseInt(ano);
+    }
+
+    public void exibirDados(){
+        JOptionPane.showMessageDialog(null, "Dados do veículo: \n\nPlaca : " + this.placa + "\n Ano : " + this.ano,"Mensagem",1);
     }
 }

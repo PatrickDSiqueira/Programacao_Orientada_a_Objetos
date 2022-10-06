@@ -1,6 +1,6 @@
-/**
- * Funcionario
- */
+package br.com.pratica03.folhadepagamento;
+
+
 public abstract class  Funcionario {
     private int matricula;
     private String nome;

@@ -1,3 +1,5 @@
+package br.com.pratica03.folhadepagamento;
+
 public class FProdutividade extends Funcionario {
     private double valor;
     private int producao;

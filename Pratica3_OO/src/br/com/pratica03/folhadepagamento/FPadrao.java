@@ -1,3 +1,5 @@
+package br.com.pratica03.folhadepagamento;
+
 public class FPadrao extends Funcionario {
 
     public FPadrao(int matricula, String nome, double salario) {

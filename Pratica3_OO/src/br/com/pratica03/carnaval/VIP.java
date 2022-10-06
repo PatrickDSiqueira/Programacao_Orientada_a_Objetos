@@ -1,4 +1,4 @@
-package br.com.pratica3.carnaval;
+package br.com.pratica03.carnaval;
 
 import java.text.NumberFormat;
 

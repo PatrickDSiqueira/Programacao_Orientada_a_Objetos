@@ -1,20 +1,32 @@
 package br.com.pratica03.veiculo;
 
-import br.com.pratica3.veiculo.Veiculo;
+import javax.swing.JOptionPane;
 
-public class Onibus extends Veiculo {
+public final class Onibus extends Veiculo {
     
-    private int acentos;
+    private int assentos;
     
 
-    public int getAcentos() {
-        return acentos;
+    public int getAssentos() {
+        return assentos;
     }
 
-    public void setAcentos(int acentos) {
-        this.acentos = acentos;
+    public void setAssentos(int assentos) {
+        this.assentos = assentos;
     }
 
+    public Onibus (String placa, int ano, int assentos){
+
+        super(placa, ano);
+
+            this.assentos = assentos;
+    }
+
+    public void exibirDados(){
+
+    JOptionPane.showMessageDialog(null, "Dados do ônibus: \n\nPlaca : " + getPlaca() + "\n Ano : " + getAno() + "\n Assentos : " + getAssentos(),"Mensagem", 1);
+
+    }
 
     
 }

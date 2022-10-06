@@ -1,3 +1,5 @@
+package br.com.pratica03.folhadepagamento;
+
 public class FComissionado extends Funcionario {
     private double percentual;
     private double vendas;
