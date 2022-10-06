@@ -1,4 +1,4 @@
-package br.com.pratca04.contaabstract;
+package br.com.pratica04.contaabstract;
 
 public abstract class Conta {
     private double saldo;

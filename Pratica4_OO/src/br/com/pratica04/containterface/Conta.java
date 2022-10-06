@@ -1,4 +1,4 @@
-package br.com.pratca04.containterface;
+package br.com.pratica04.containterface;
 
 public interface Conta {
 

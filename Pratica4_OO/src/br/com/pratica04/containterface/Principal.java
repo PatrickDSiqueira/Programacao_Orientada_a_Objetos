@@ -1,4 +1,4 @@
-package br.com.pratca04.containterface;
+package br.com.pratica04.containterface;
 
 public class Principal {
     public static void main(String[] args) {

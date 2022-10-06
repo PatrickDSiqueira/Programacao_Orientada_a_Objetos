@@ -1,19 +1,18 @@
-package br.com.pratca04.containterface;
+package br.com.pratica04.containterface;
 
-public class ContaCorrente implements Conta {
+public class ContaPoupanca implements Conta {
 
     private double saldo;
-    private double taxaOperacao = 0.45;
-
+    
     @Override
     public void depositar(double valor) {
-        this.saldo += saldo - taxaOperacao;
-        
+        this.saldo += valor;
     }
 
     @Override
     public void sacar(double valor) {
-       this.saldo -= valor - taxaOperacao;
+        this.saldo -= valor;
+        
     }
 
     @Override
