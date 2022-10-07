@@ -1,5 +1,7 @@
 import java.util.Date;
 
+import br.com.pagamento.CartaoCredito;
+import br.com.pagamento.CartaoDebito;
 import br.com.pagamento.Pagamento;
 import br.com.pagamento.Pix;
 
@@ -17,6 +19,8 @@ public class App {
         CartaoCredito cc1 = new CartaoCredito(null, 0, 0, null, "cvd", "Marcelo");
 
         cc1.ImprimirCupomFiscal();
+
+        CartaoDebito cd1 = new CartaoDebito(new Date().toString(), 25, 250, "joao", "1234");
 
 
 
