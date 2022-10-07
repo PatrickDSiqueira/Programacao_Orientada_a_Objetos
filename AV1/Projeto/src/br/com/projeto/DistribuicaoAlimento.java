@@ -16,7 +16,7 @@ public class DistribuicaoAlimento extends Projeto{
 
     @Override
     public boolean ValidaProjeto() {
-        if (super.getDataFim() == ""){
+        if (super.getDataFim().isEmpty()){
             return true;
         } else {
             return false;

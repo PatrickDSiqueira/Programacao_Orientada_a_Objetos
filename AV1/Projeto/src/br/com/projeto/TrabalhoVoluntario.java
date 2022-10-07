@@ -15,7 +15,11 @@ public class TrabalhoVoluntario extends Projeto {
 
     @Override
     public boolean ValidaProjeto() {
-        return false;
+        if (getDuracaoTrabalho() > 2){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
@@ -37,5 +41,12 @@ public class TrabalhoVoluntario extends Projeto {
 
     public void setDuracaoTrabalho(int duracaoTrabalho) {
         this.duracaoTrabalho = duracaoTrabalho;
+    }
+
+    @Override
+    public String toString() {
+
+        return " nomeProjeto=" + super.getNomeProjeto() + ", descricao=" + super.getDescricao() + ", dataInicio=" + super.getDataInicio()
+        + ", dataFim=" + super.getDataFim() + "tipoTrabalho=" + getTipoTrabalho() + ", duracaoTrabalho=" + getDuracaoTrabalho();
     }
 }
